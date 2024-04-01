@@ -1,0 +1,155 @@
+Delivered-To: arupadwal610@gmail.com
+Received: by 2002:a0c:e2c6:0:b0:658:5b74:5cdd with SMTP id t6csp281785qvl;
+        Wed, 25 Oct 2023 23:20:42 -0700 (PDT)
+X-Received: by 2002:a05:6512:2f0:b0:502:ff3b:766f with SMTP id m16-20020a05651202f000b00502ff3b766fmr13236121lfq.6.1698301241993;
+        Wed, 25 Oct 2023 23:20:41 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1698301241; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zPIgKN9rboyFIx2+QMtAQJwjY3OLWLwPJb7AbzO4FGSD/VmNUsbLLGZwZywSeM5iul
+         TT3Pwa+5yOgasRZzZ/nYyvBdlnQqRhVChI29HxVa6ZwQSENPioi5Z8WKrDqNE1VK2hsa
+         VFyWuYrLYrb5f2LCbjB66lDAQxrrSW54Ar5AbZcuafYNG7KGG80h8uO1r78fL9r6Yb0Z
+         m3T3PbQ2QCU2LdgPWBDcV0w9kek8eg90HevI2h2VYxIw5kMYEYTnRPxQ7Seiu54p+fkQ
+         gk9iMhXahdAXB+PsiImRXoFPWNmvuhH/S6935DCnkxnNF8J6nwfPfpkblRja1t0yV849
+         t0GA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=jHjNZ7povU1qlQK8bxLu0zv3KKWoF3UEQZDNbvzLIaA=;
+        fh=AyC3z6yBfn4BB4hZz7ARLd4eSJ3X/b8hBpDo1Xtfm/o=;
+        b=mD6dbnra9iSc717GL1eIEkW6ChYkc2UJ+mAKHMdebhVP3Akb6HhUqauQjpJOpwyZEN
+         yaNzHAMtDLIf9o2tOL97QU4W1euZlLZl8goGdZAD8X03NzweW3pIwunS6CT+MQS0wuuD
+         9IbyS5tPaykYf8hOraQan0t6WPKAZfcL+0c4HjjkqOVvsnzImaP6Fu3S05UMy/F05XAG
+         VtcPnZ9rH0W+EKjauMxICucHdSSmN1yyaQezTEf89gkS8uNZMVhyLSsexRAvzE1loJTg
+         DLELzURsidfvFqGkxYVPuBquyd+e+7pNYeTpSSW9A3/NWo3o65hRRstjA1G9NcaVvFfW
+         OP0A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@excelr.com header.s=google header.b=KC7HWpsw;
+       spf=pass (google.com: domain of assignments_pune@excelr.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=assignments_pune@excelr.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=excelr.com
+Return-Path: <assignments_pune@excelr.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id k1-20020ac257c1000000b0050796a5bba0sor3649334lfo.29.2023.10.25.23.20.41
+        for <arupadwal610@gmail.com>
+        (Google Transport Security);
+        Wed, 25 Oct 2023 23:20:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of assignments_pune@excelr.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@excelr.com header.s=google header.b=KC7HWpsw;
+       spf=pass (google.com: domain of assignments_pune@excelr.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=assignments_pune@excelr.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=excelr.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=excelr.com; s=google; t=1698301241; x=1698906041; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=jHjNZ7povU1qlQK8bxLu0zv3KKWoF3UEQZDNbvzLIaA=;
+        b=KC7HWpsw/uV6sElvkIA1SE+6800nCiV3Bi9awP0EMMrhadK2z9XqfDu/TVMrFMXlU7
+         gHEgfwAYHLPuQCbSAWMfk6qaLhvNCyUqcN39KLfXpcgNRC6/+cnlbkkdEWgpHcdTeV0u
+         edWo5AV9p/xMIuncOyjz7Yz1O9Ls3bklO9GIFP8RVIyS0LoYMVmVF/hRrKasrYPR9X8V
+         /4eZKDUHiPswl5J2iFb8HAWjMoRscCsxdJPz4VoAa6GguP1dZxMMAXifwF4sj+A6hzAi
+         8tzm7Ww8s4y+7jkPs8R19fxpegKpWRYlN2TB6K4xJxfylijsFU4+M+gk/EwIg9QAhUNr
+         e3rA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1698301241; x=1698906041;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=jHjNZ7povU1qlQK8bxLu0zv3KKWoF3UEQZDNbvzLIaA=;
+        b=DL6AFpqY0o6mnASg48mS2vaEkKiPEU0ugYmQZlb3Y2+5sygr6TE8utViyWCRFbN3hI
+         +fYcjITxHdvUc7aqHWtkMcbC1Sznn9ExdcAxKtjFHYXu45Yzd0LWKiQTP81zP0NsShLp
+         2056gucEpW9/OMgnSRxQNDEEtIE/VQjZqbLbq8VpNBI/X/okw1Rx3Yo1UnWdlPlhd8/h
+         SaeutF0HJKvG4T0WoN98BpGHqaY82DuqoTvbjSbCOWuhJbJW/IMAZbCTwAl39MnKAKhg
+         cxCl3rGos1idDxwHGZAwJ2gBIpaQ7aUFiwz0GLowMSNgX17cxpgHWWQU9AtWNF68rmx1
+         XM0g==
+X-Gm-Message-State: AOJu0Yx5S8paCOUM3uU02LDS4bdJglbffHTcEO2B+6GGinEwQy5dLik3
+	0xg5bROWJfOzWn8RO6ODU78k6EmruT5hFuLze6rbDExCV2g/MEI8Qxo=
+X-Google-Smtp-Source: AGHT+IHpfzRhN087J8OsWHLn+nPt+cSNSsKzmuR7SBKsZT6F8sH8sIbgrrnwYuqBGzYR6bIYbCPpk83GHyC/I87oNhA=
+X-Received: by 2002:a05:6512:6c7:b0:508:1a25:a190 with SMTP id
+ u7-20020a05651206c700b005081a25a190mr2741077lff.23.1698301240892; Wed, 25 Oct
+ 2023 23:20:40 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAGLsQvXNDq3T_8bOwPXnXifT-juwVf6uDM4B42G9P5UCchtoWg@mail.gmail.com>
+In-Reply-To: <CAGLsQvXNDq3T_8bOwPXnXifT-juwVf6uDM4B42G9P5UCchtoWg@mail.gmail.com>
+From: Assignments Pune <assignments_pune@excelr.com>
+Date: Thu, 26 Oct 2023 11:50:30 +0530
+Message-ID: <CAKfxrMVfQfJx2JsKOGnZtZT_t26UFe8so=o0gopB=HHoBjaAmQ@mail.gmail.com>
+Subject: Re: simple linear regression assignment
+To: arati padwal <arupadwal610@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000002f7b9b0608989215"
+
+--0000000000002f7b9b0608989215
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Arati,
+I reviewed your assignment.
+In SLR, transformations like Log, sqrt , sq etc are not  applied on
+models.Please make changes and also focus on the EDA and visualization
+part.Resubmit
+after changes.
+https://towardsdatascience.com/feature-transformation-for-multiple-linear-r=
+egression-in-python-8648ddf070b8
+
+For SLR transformations , please login into the LMS portal, self-paced
+courses--> data science assignments--> Python codes--> Simple Linear
+Regression
+
+
+*Create GITHUB  repositories and upload your codes there.*
+
+Regards
+Assignments team
+Kishore
+9148198159
+
+On Wed, Oct 25, 2023 at 8:14=E2=80=AFPM arati padwal <arupadwal610@gmail.co=
+m> wrote:
+
+>
+>
+
+--0000000000002f7b9b0608989215
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:verdana,=
+sans-serif;font-size:large">Hi=C2=A0Arati,</div><div><div dir=3D"ltr" class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><d=
+iv><font face=3D"verdana, sans-serif" size=3D"4">I reviewed your assignment=
+.<br></font></div><div><span style=3D"font-size:14pt;font-family:Verdana"><=
+span style=3D"font-size:14pt">In=C2=A0</span><span style=3D"font-size:14pt;=
+font-weight:bold;color:rgb(255,0,0)">SLR</span><span style=3D"font-size:14p=
+t">, transformations like Log, sqrt , sq etc are not=C2=A0 applied on model=
+s.Please make changes=C2=A0and also focus on the EDA and visualization part=
+.</span><span style=3D"font-size:14pt;font-weight:bold;color:rgb(255,0,0)">=
+Resubmit after changes</span><span style=3D"font-size:14pt">.<br><a href=3D=
+"https://towardsdatascience.com/feature-transformation-for-multiple-linear-=
+regression-in-python-8648ddf070b8">https://towardsdatascience.com/feature-t=
+ransformation-for-multiple-linear-regression-in-python-8648ddf070b8</a>
+<br>
+<br>For SLR transformations , please login into the LMS portal, self-paced =
+courses--&gt; data science assignments--&gt; Python codes--&gt; Simple Line=
+ar Regression</span></span><font face=3D"verdana, sans-serif" size=3D"4"><b=
+r></font></div><div><br></div><div><div style=3D"color:rgb(34,34,34)"><div>=
+<span style=3D"color:rgb(0,0,0)"><font face=3D"verdana, sans-serif" size=3D=
+"4"><br></font></span></div><div><b style=3D"color:rgb(0,0,0)"><i><font fac=
+e=3D"verdana, sans-serif" size=3D"4">Create GITHUB=C2=A0 repositories and u=
+pload your codes there.</font></i></b></div><div><b style=3D"color:rgb(0,0,=
+0)"><i><font face=3D"verdana, sans-serif" size=3D"4"><br></font></i></b></d=
+iv></div><div style=3D"color:rgb(34,34,34)"><font face=3D"verdana, sans-ser=
+if" size=3D"4">Regards</font></div><div style=3D"color:rgb(34,34,34)"><div>=
+<font face=3D"verdana, sans-serif" size=3D"4">Assignments team</font></div>=
+<div><font face=3D"verdana, sans-serif" size=3D"4">Kishore</font></div><div=
+><font face=3D"verdana, sans-serif" size=3D"4">9148198159</font></div></div=
+><div style=3D"color:rgb(34,34,34)"><div style=3D"color:rgb(136,136,136)"><=
+font face=3D"verdana, sans-serif" size=3D"4"><img src=3D"https://docs.googl=
+e.com/uc?export=3Ddownload&amp;id=3D1VHGZ9zfQEQcjTJ-1zKU7YyqIKb7UDcax&amp;r=
+evid=3D0B1PHP1bQ2N13M1VhUnFQbXdrU2RyTjB0MDYzNk8xdm1SMHlFPQ" width=3D"96" he=
+ight=3D"54" style=3D"color:rgb(32,33,36)"></font></div></div></div></div></=
+div></div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gm=
+ail_attr">On Wed, Oct 25, 2023 at 8:14=E2=80=AFPM arati padwal &lt;<a href=
+=3D"mailto:arupadwal610@gmail.com">arupadwal610@gmail.com</a>&gt; wrote:<br=
+></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;=
+border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><=
+br></div>
+</blockquote></div>
+
+--0000000000002f7b9b0608989215--
